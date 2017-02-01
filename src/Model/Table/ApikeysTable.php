@@ -10,8 +10,6 @@ use SecurityLib\Strength;
 class ApikeysTable extends BaseTable {
 
     public function beforeSave(Event $event, EntityInterface $entity, \ArrayObject $options) {
-        parent::beforeMarshal($event, $entity, $options);
-
         if($entity->isNew()) {
             $factory = new Factory;
             $generator = $factory->getGenerator(new Strength(Strength::MEDIUM));
