@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "required": [ "Task" ],
+    "properties": {
+        "Task": {
+            "type": "object",
+            "required": [ "title", "description" ],
+            "properties": {
+                "id": { "type": "integer" },
+                "title": { "type": "string" },
+                "description": { "type": "string" }
+            }
+        },
+        "Project": {
+            "type": "object",
+            "required": [ "id" ],
+            "properties": {
+                "id": { "type": "integer" }
+            }
+        }
+    }
+}
